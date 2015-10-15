@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <!-- Title-->
-<title>SIT Openhouse 2015</title>
+<title>SIT Open house 2015</title>
 <!-- CSS Stylesheet-->
 <?php echo HTML::style('themes/default/assets/css/bootstrap/bootstrap.min.css');?>
 <?php echo HTML::style('themes/default/assets/css/bootstrap/bootstrap-themes.css');?>
@@ -80,7 +80,7 @@
 												</div>
 												<div class="tab-content">
 														<div class="tab-pane fade" id="step1" parsley-validate parsley-bind> 
-															<h3>ข้อมูลผู้เข้าร่วมกิจกรรม SIT Openhouse 2015</h3><br>
+															<h3>ข้อมูลผู้เข้าร่วมกิจกรรม SIT Open house 2015</h3><br>
 															<div class="form-group row">
 																<div class="col-md-6">
 																	<label class="control-label">ชื่อ</label>
@@ -111,7 +111,7 @@
 															<div class="form-group">
 																<label>อีเมล์</label>
 																<div class="input-icon"> <i class="fa fa-envelope-o ico"></i>
-																	<input class="form-control " type="text" name="email" placeholder="Your email" parsley-error-message="กรุณากรอกกรอกอีเมล์ให้ถูกต้อง" parsley-required="true" parsley-type="email">
+																	<input class="form-control " type="text" name="email" placeholder="Your email" parsley-error-message="กรุณากรอกอีเมล์ให้ถูกต้อง" parsley-required="true" parsley-type="email">
 																</div>
 															</div>
 															<div class="form-group">
@@ -120,13 +120,9 @@
 																</div>
 															<div class="form-group">
 																<label>โรงเรียน</label>
-																<select  class="selectpicker form-control  show-tick" name="school" data-size="10" data-live-search="true" title="Your school" parsley-error-container="div#select-school-error" parsley-error-message="กรุณากรอกเลือกโรงเรียนที่ศึกษาอยู่" parsley-required="true">
-																	<?php foreach ($school as $key => $item): ?>
-																	<option value="<?php echo $key; ?>"><?php echo object_get($item, 'school_name'); ?></option>
-																	
-																	<?php endforeach; ?>					
-																</select>
-																<div id="select-school-error"></div>
+																<div class="input-icon"> <i class="fa fa-university ico"></i>
+																	<input class="form-control " type="text" name="school" placeholder="Your school" parsley-error-message="กรุณากรอกโรงเรียน" parsley-required="true" >
+																</div>
 															</div>
 															
 
@@ -395,7 +391,7 @@ $(document).ready(function() {
                 							success: function( data ){
                     							if(data['status'] == 200){
                     								main.removeClass("slideDown");
-                    								setTimeout( "window.location.href='http://www.sit.kmutt.ac.th/openhouse'", 1000 );
+                    								//setTimeout( "window.location.href='http://www.sit.kmutt.ac.th/openhouse'", 1000 );
                     								
                     							}
 							                },

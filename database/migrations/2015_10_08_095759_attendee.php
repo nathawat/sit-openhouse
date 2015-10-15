@@ -19,7 +19,7 @@ class Attendee extends Migration
             $table->integer('sex')->length(1)->unsigned();
             $table->string('mobile', 255);
             $table->string('email', 255);
-            $table->integer('school')->length(11)->unsigned();
+            $table->string('school', 255);
             $table->integer('school_grade')->length(2)->unsigned();
             $table->integer('study_plan')->length(2)->unsigned();
             $table->text('address')->nullable();
