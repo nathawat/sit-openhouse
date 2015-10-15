@@ -26,7 +26,7 @@ class HomeController extends Controller
         $this->theme = Theme::uses('default')->layout('default');
 
         $view = array(
-            'school' => School::all()
+           // 'school' => School::all()
         );
         $this->theme->setPageTitle("Blank Page");
         $this->theme->setTitle("Hello Worlds");

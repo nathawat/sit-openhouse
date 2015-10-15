@@ -392,7 +392,7 @@ $(document).ready(function() {
                     							if(data['status'] == 200){
                     								main.removeClass("slideDown");
                     								//setTimeout( "window.location.href='http://www.sit.kmutt.ac.th/openhouse'", 1000 );
-                    								
+    	
                     							}
 							                },
 							                error: function( jqXhr, textStatus, errorThrown ){
