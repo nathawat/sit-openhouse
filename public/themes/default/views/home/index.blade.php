@@ -221,8 +221,10 @@
 																
 														</div>
 														<div class="tab-pane fade align-lg-center" id="step3">
-																<br><h3>ขอบคุณที่ให้ความสนใจเข้าร่วมกิจกรรม นะคะ  <span></span> .....</h3><br>
+																<br><h3>ขอบคุณที่ให้ความสนใจเข้าร่วมกิจกรรม นะคะ.</h3><br>
 																<span> ประกาศรายชื่อผู้มีสิทธิ์เข้าร่วมกิจกรรมภายในวันที่ 10 พฤศจิกายน 2558</span><br>&nbsp;<br>&nbsp;
+
+
 														</div>
 														
 														<footer class="row">
@@ -352,7 +354,7 @@ $(document).ready(function() {
 									};
 									
 					// Set the name for the next tab
-					$('#step3 h3').find("span").html($('#fullname').val());
+					//$('#step3 h3').find("span").html($('#fullname').val());
 					},
 					onTabClick: function(tab, navigation, index) {
 									$.notific8('Please click <strong>next button</strong> to wizard next step!! ',{ life:5000, theme:"danger" ,heading:" Wizard Tip :); "});
@@ -391,8 +393,9 @@ $(document).ready(function() {
                 							success: function( data ){
                     							if(data['status'] == 200){
                     								main.removeClass("slideDown");
-                    								//setTimeout( "window.location.href='http://www.sit.kmutt.ac.th/openhouse'", 1000 );
-    	
+    		
+    												$('#step3').find("h3").html('<i class="fa fa-check-circle" style="color:green;"></i> บันทึกข้อมูลสำเร็จ');
+    												setTimeout( "window.location.href='http://www.sit.kmutt.ac.th/'", 10000 );
                     							}
 							                },
 							                error: function( jqXhr, textStatus, errorThrown ){
